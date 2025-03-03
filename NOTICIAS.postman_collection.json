@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "d88a3e5a-a860-4148-9117-d78d400063cc",
+		"name": "NOTICIAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19548626",
+		"_collection_link": "https://warped-crater-486900.postman.co/workspace/MIR~32be35ff-c3d1-4c57-a46a-710d944cc4ea/collection/19548626-d88a3e5a-a860-4148-9117-d78d400063cc?action=share&source=collection_link&creator=19548626"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\": \"test\",\r\n\t\"password\": \"yeison12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "GetToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"username\": \"yeison\",\r\n\t\"password\": \"yeison12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/authenticate"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "news/latest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5ZWlzb24iLCJpYXQiOjE3NDA5NTM3ODUsImV4cCI6MTc0MTA0MDE4NX0.Wt32W1Jr-LSJp1Wm0ljTjL5kZObCUDUSuli31MDDUdU",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/news/latest"
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles noticia especifica",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5ZWlzb24iLCJpYXQiOjE3NDA5NTM3ODUsImV4cCI6MTc0MTA0MDE4NX0.Wt32W1Jr-LSJp1Wm0ljTjL5kZObCUDUSuli31MDDUdU",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/news/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Noticias Recomendadas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5ZWlzb24iLCJpYXQiOjE3NDA5NTM3ODUsImV4cCI6MTc0MTA0MDE4NX0.Wt32W1Jr-LSJp1Wm0ljTjL5kZObCUDUSuli31MDDUdU",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/news/1/recommended"
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5ZWlzb24iLCJpYXQiOjE3NDA5NTM3ODUsImV4cCI6MTc0MTA0MDE4NX0.Wt32W1Jr-LSJp1Wm0ljTjL5kZObCUDUSuli31MDDUdU",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5ZWlzb24iLCJpYXQiOjE3NDA5NTM3ODUsImV4cCI6MTc0MTA0MDE4NX0.Wt32W1Jr-LSJp1Wm0ljTjL5kZObCUDUSuli31MDDUdU",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/news/all"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
