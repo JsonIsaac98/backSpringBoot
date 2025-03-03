@@ -1,5 +1,10 @@
 # Documentación de Endpoints API de Noticias
 
+# Recomendaciones
+    - Utilizar Postman para probar
+    - Utilizar MySQL WampServer
+    - Importar la base de datos llamada bdnoticia.sql que se ubica en la raiz del proyecto
+
 # Notas sobre seguridad:=
     Todos los endpoints excepto los de autenticación (/api/auth/*) requieren un token JWT válido.
     El token JWT tiene una duración de 24 horas (86400000 ms).
@@ -86,8 +91,7 @@ jwt.expiration=86400000
     "imageUrl": "https://www.prensalibre.com/wp-content/uploads/2018/12/ccbc74c6-7149-42c4-aa43-a9c30641fff3.jpg?quality=52",
     "publishDate": "2025-03-01T16:03:12",
     "categoryName": "Deportes"
-  },
-  ...
+  }
 ]
 ```
 
@@ -146,8 +150,7 @@ jwt.expiration=86400000
     "imageUrl": "https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-479v.jpg?sfvrsn=4dba955c_19%20479w",
     "publishDate": "2025-02-26T16:03:12",
     "categoryName": "Salud"
-  },
-  ...
+  }
 ]
 ```
 
@@ -171,8 +174,7 @@ jwt.expiration=86400000
     "id": 2,
     "name": "Deportes",
     "description": "Noticias deportivas de todo el mundo"
-  },
-  ...
+  }
 ]
 ```
 
